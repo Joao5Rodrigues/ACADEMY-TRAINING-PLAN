@@ -49,6 +49,7 @@
 
 /* C_GLOBAL_TYPES_MSP_15_D */
 
+
 /* integer types */
 typedef signed char           INT8;
 typedef signed short          INT16;
@@ -78,6 +79,7 @@ typedef unsigned long long    *P_UINT64;
 typedef enum { FALSE=0 , TRUE=1 } BOOLEAN;
 typedef enum { EVEN=0, ODD=1, NONE=2} PARITY;
 typedef enum { NO_FAULT=0, FAULT=1 } STATUS;
+typedef enum { SUM=1 , SUB=2 , MUL=3, DIV=4 } OPERATION;
 
 typedef enum
 {
