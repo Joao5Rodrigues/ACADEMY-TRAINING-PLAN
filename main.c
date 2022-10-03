@@ -5,7 +5,7 @@
 
 int main(int argc, char const *argv[]){
     UINT32 test = 0;
-    BOOLEAN valid_flag;
+    BOOLEAN valid_flag = FALSE;
     // test = sum(4,5,&valid_flag);
 
     return 0;
