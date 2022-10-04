@@ -37,9 +37,7 @@ INT32 pitagoras(UINT16 cateto_1, UINT16 cateto_2){
 
     if (cateto_1>=255 || cateto_2>=255){
         check_failing = FALSE;
-    }else if(sqrt(pow(cateto_1,2)+pow(cateto_2,2))==0){
-        check_failing = FALSE;
-    }else
+    }
 
     cateto_1 = multiplication(cateto_1, cateto_1, &valid_flag);
     if (valid_flag == FALSE){
@@ -53,6 +51,10 @@ INT32 pitagoras(UINT16 cateto_1, UINT16 cateto_2){
 
     output = sum(cateto_1, cateto_2, valid_flag);
     if (valid_flag == FALSE){
+        check_failing = FALSE;
+    }
+
+    if(output == 0){
         check_failing = FALSE;
     }
 
