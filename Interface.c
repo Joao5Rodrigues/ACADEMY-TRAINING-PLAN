@@ -2,33 +2,33 @@
 
 UINT32 do_math(OPERATION oper, UINT32 input_1, UINT32 input_2, UINT8 * valid){
     UINT32 output = 0;
-    *valid = TRUE;
+    BOOLEAN local_valid = TRUE;
     switch (oper)
     {
     case SUM:
-        output = sum(input_1,input_2,&valid);
-        if(*valid==FALSE){
+        output = sum(input_1,input_2,&local_valid);
+        if(local_valid==FALSE){
             *valid = 0;
             output = 0;
         }else *valid = 1;
         break;
     case SUB:
-        output = subtraction(input_1,input_2,&valid);
-        if(*valid==FALSE){
+        output = subtraction(input_1,input_2,&local_valid);
+        if(local_valid==FALSE){
             *valid = 0;
             output = 0;
         }else *valid = 1;
         break;
     case MUL:
-        output = multiplication(input_1,input_2,&valid);
-        if(*valid==FALSE){
+        output = multiplication(input_1,input_2,&local_valid);
+        if(local_valid==FALSE){
             *valid = 0;
             output = 0;
         }else *valid = 1;
         break;
     case DIV:
-        output = division(input_1,input_2,&valid);
-        if(*valid==FALSE){
+        output = division(input_1,input_2,&local_valid);
+        if(local_valid==FALSE){
             *valid = 0;
             output = 0;
         }else *valid = 1;
